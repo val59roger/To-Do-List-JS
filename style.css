@@ -1,0 +1,90 @@
+#AjoutTache {
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 3s;
+}
+
+#AjoutTache:hover {
+    background-color: blueviolet;
+}
+
+#AjoutTache:active {
+    background-color: darkblue;
+}
+
+#LabelAjoutTache {
+    padding: 5px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid #3498db;
+}
+
+table th{
+    background-color: #555;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: solid 1px #666;
+}
+
+table td{
+    padding: 10px 15px;
+    border: solid 1px #ddd;
+}
+
+table td:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #ddd;
+}
+
+caption {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #666;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1) inset;
+    border-bottom: 2px solid #3498db;
+}
+
+caption:hover {
+    background-color: #2980b9;
+}
+
+#SupprActions {
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#SupprActions:hover {
+    background-color: darkred;
+}
+
+#SelectTache{
+    background-color: #2874a6;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
