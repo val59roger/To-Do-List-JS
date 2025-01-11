@@ -137,16 +137,13 @@ function cocher(event) {
 }
 
 function filterTasks() {
-    //change l'affichage des tâches en fonction de la valeur du select
     const filterValue = document.getElementById("SelectTache").value;
     const tableau = document.getElementById("tableauTaches");
     
-    // Effacer toutes les lignes sauf l'en-tête
     while (tableau.rows.length > 1) {
         tableau.deleteRow(1);
     }
 
-    // Filtrer les tâches à afficher
     let filteredTasks = [];
     if (filterValue === "all") {
         filteredTasks = tableauTaches;
@@ -156,7 +153,6 @@ function filterTasks() {
         filteredTasks = tableauTaches.filter(t => !tableauTerminee.includes(t));
     }
 
-    // Afficher les tâches filtrées
     filteredTasks.forEach((tache) => {
         const ligne = tableau.insertRow();
         const celluleNumero = ligne.insertCell();
@@ -167,7 +163,7 @@ function filterTasks() {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.id = "terminer" + tache.numero;
-        checkbox.checked = tableauTerminee.includes(tache); // Coche si terminé
+        checkbox.checked = tableauTerminee.includes(tache);
         checkbox.addEventListener("change", cocher);
         celluleTerminee.appendChild(checkbox);
         celluleTerminee.style.textAlign = "center";
@@ -183,7 +179,6 @@ function filterTasks() {
         celluleActions.appendChild(bouton);
         celluleActions.style.textAlign = "center";
 
-        // Appliquer le style barré si terminé
         if (checkbox.checked) {
             celluleLibelle.style.textDecoration = "line-through";
         }
